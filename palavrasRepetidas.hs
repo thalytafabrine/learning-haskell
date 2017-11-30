@@ -13,7 +13,8 @@ getTuples (head:tail) = do
 getQuantity:: String -> [String] -> Int
 getQuantity word [] = 0
 getQuantity word (head:tail) =
-    if head == word then 1 + getQuantity word tail
+    if head == word 
+    then 1 + getQuantity word tail
     else getQuantity word tail
     
 removeElement :: String -> [String] -> [String]
